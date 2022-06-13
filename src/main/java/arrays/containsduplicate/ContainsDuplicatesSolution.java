@@ -11,12 +11,16 @@ public class ContainsDuplicatesSolution {
     }
 
     public static boolean containsDuplicate(int[] numbers) {
-        if (numbers == null || numbers.length == 0) return false;
+        if (numbers == null || numbers.length == 0) {
+            return false;
+        }
 
         Set<Integer> unique = new HashSet<>();
 
         for (Integer it : numbers) {
-            if (!unique.add(it)) return true;
+            if (!unique.add(it)) {
+                return true;
+            }
         }
         return false;
     }
